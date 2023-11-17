@@ -134,7 +134,14 @@ export default function Page() {
   return (
     <div>
       <Box sx={{ width: "100%" }}>
-        <AppBar position="static" className="customAppBar">
+        <AppBar position="static" className="customAppBar" sx={{
+        backgroundColor: 'gold', // สีพื้นหลังทอง
+        color: 'black', // สีของข้อความ
+        padding: '10px 15px', // การเพิ่ม padding
+        borderRadius: '5px', // มุมที่มน
+        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)', // เพิ่มเงา
+        fontWeight: 'bold' // ข้อความที่เน้น
+      }}>
           <Toolbar>
             <IconButton
               size="large"
@@ -293,6 +300,17 @@ export default function Page() {
               />
 
               <Button
+                sx={{
+                  backgroundColor: 'gold', // สีพื้นหลังทอง
+                  color: 'black', // สีของข้อความ
+                  border: 'none', // ไม่มีเส้นขอบ
+                  padding: '10px 20px', // การเพิ่ม padding
+                  borderRadius: '5px', // มุมที่มน
+                  boxShadow: '0 2px 4px 0 rgba(0, 0, 0, 0.2)', // เพิ่มเงา
+                  fontSize: '1em', // ขนาดของฟอนต์
+                  cursor: 'pointer', // รูปแบบ cursor
+                  width: '100%' // ปุ่มกว้างเต็มความกว้าง
+                }}
                 className={styles.fullWidthButton}
                 variant="contained"
                 onClick={handleBuy}
